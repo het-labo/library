@@ -21,7 +21,7 @@ jobs:
         run: npx nuxi generate   # outputs to .output/public
 
       - name: Upload via rsync over SSH
-        uses: burnett01/rsync-deployments@6.0
+        uses: burnett01/rsync-deployments@v1.1.15
         with:
           switches: -az --delete
           path: ./.output/public/
