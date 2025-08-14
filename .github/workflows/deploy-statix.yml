@@ -20,13 +20,12 @@ jobs:
       - name: Generate static site
         run: npx nuxi generate   # outputs to .output/public
 
-      - name: Upload via rsync over SSH
-        uses: burnett01/rsync-deployments@v1.1.2
+      - name: Upload via SCP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          switches: -az --delete
-          path: ./.output/public/
-          remote_path: ${{ secrets.REMOTE_DIR }}
-          remote_host: ${{ secrets.SSH_HOST }}
-          remote_user: ${{ secrets.SSH_USER }}
-          remote_port: ${{ secrets.SSH_PORT }}
-          remote_key: ${{ secrets.SSH_KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          source: ".output/public/*"
+          target: ${{ secrets.REMOTE_DIR }}
