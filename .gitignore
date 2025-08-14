@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+.nuxt/
+dist/
+
+# Local env files
+.env
+.env.*
+!.env.example  # keep an example env file in version control
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local cache
+.cache/
+*.local
+
+# Editor files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS-generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+[data-filter],
+[data-filter-mode] {
+  padding: 0.4em 0.8em;
+  margin: 0.2em;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+  transition: background 0.2s, border-color 0.2s;
+}
+[data-filter]:hover,
+[data-filter-mode]:hover {
+  background: #f0f0f0;
+}
+[data-filter].is-active,
+[data-filter][aria-pressed="true"],
+[data-filter-mode][aria-pressed="true"] {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+[data-filter-search] {
+  padding: 0.4em 0.8em;
+  margin: 0.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+  min-width: 200px;
+}
+[data-tags][hidden] {
+    display: none;
+}
