@@ -16,7 +16,7 @@
     </nav>
 
     <nav>
-        <header><h6>Tools!!!!!</h6></header>
+        <header><h6>Tools!</h6></header>
         <ul>
             <li>
                 <NuxtLink href="/tools/signature-builder">
